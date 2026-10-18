@@ -1,0 +1,188 @@
+
+/* Thiết lập chung */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Thanh menu */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    min-height: 48px;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar a:hover,
+.navbar .active {
+    background-color: #000;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 18px;
+    background-color: #292929;
+}
+
+.navbar .login {
+    margin-left: auto;
+}
+
+/* Bố cục ba cột */
+.container {
+    display: flex;
+    min-height: 415px;
+}
+
+/* Cột trái */
+.left-sidebar {
+    width: 16.6667%;
+    background-color: #f1f1f1;
+    padding: 15px;
+    text-align: center;
+}
+
+.left-sidebar a {
+    display: block;
+    color: #337ab7;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Nội dung chính */
+.main-content {
+    width: 66.6666%;
+    padding: 20px 15px;
+    background-color: white;
+}
+
+.main-content h1 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+.main-content h2 {
+    font-size: 22px;
+}
+
+.main-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.main-content hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+/* Cột phải */
+.right-sidebar {
+    width: 16.6667%;
+    background-color: #f1f1f1;
+    padding: 18px 14px;
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Chân trang */
+.footer {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    min-height: 55px;
+    font-size: 14px;
+}
+
+/* Responsive cho máy tính bảng */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .left-sidebar {
+        width: 25%;
+    }
+
+    .main-content {
+        width: 75%;
+    }
+
+    .right-sidebar {
+        width: 100%;
+        display: flex;
+        gap: 15px;
+    }
+
+    .ad {
+        flex: 1;
+    }
+}
+
+/* Responsive cho điện thoại */
+@media screen and (max-width: 480px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 12px 10px;
+    }
+
+    .navbar .login {
+        margin-left: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-sidebar,
+    .main-content,
+    .right-sidebar {
+        width: 100%;
+    }
+
+    .left-sidebar {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .left-sidebar a {
+        padding: 8px;
+    }
+
+    .main-content h1 {
+        font-size: 28px;
+    }
+
+    .right-sidebar {
+        display: flex;
+    }
+}
